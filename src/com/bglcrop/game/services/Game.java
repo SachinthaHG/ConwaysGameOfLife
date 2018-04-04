@@ -32,8 +32,13 @@ public class Game {
         gridOfSquareCells = new int[NUMBER_OF_ROWS][NUMBER_OF_COLS];
     }
 
+    public void start() {
+        processInput();
+        processGridOfCells();
+    }
 
-    private void processInput(List<Point> pointList) {
+
+    private void processInput() {
         inputLiveCells.forEach(cell -> gridOfSquareCells[cell.getX()][cell.getY()] = 1);
     }
 
